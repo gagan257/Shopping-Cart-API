@@ -1,46 +1,48 @@
-const sequelize = require('sequelize')
+const Sequelize = require('sequelize')
 
-const db = new sequelize('shopdb','gagan','1234',{
+const db = new Sequelize('shopdb','gagan','1234',{
     host:'localhost',
-    dialect: 'mysql',
-    pool:{//tells the max and min connections that can be made at a time while processing data in database(optional attribute)
-        min: 0,
-        max: 5,
-    }
+    dialect:'mysql'
 })
 
-//creating obj
-
-const user = db.define('users',{
+const User = db.define('users',{//users is the name of the table
     id:{
-        type: sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-    },
-    name:{
-        type: sequelize.STRING,
-        allowNull: false,
-    }
-})
-
-const product = db.define('products',{
-    id:{
-        type: sequelize.INTEGER,
+        type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
     name: {
-        type: sequelize.STRING,
+        type: Sequelize.STRING,
+        allowNull: false
+    }
+})
+
+const Product = db.define('Products',{
+    id:{
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+    },
+    name: {
+        type: Sequelize.STRING,
         allowNull: false
     },
-    manufacturer: sequelize.STRING,
-    price:{
-        type: sequelize.FLOAT,
+    manufacturer: Sequelize.STRING,
+    price: {
+        type: Sequelize.FLOAT,
         allowNull: false,
         defaultValue: 0.0
     }
 })
 
-exports = module.exports = {
-    user,product
+db.sync()//used for creating db (work as a promise)
+    .then(()=> {
+        console.log("Database is been synced")
+    })
+    .catch(()=>{
+        console.log("Error in creating database")
+    })
+
+exports = module.exports = {//exports as objects
+    User,Product
 }
