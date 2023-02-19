@@ -1,0 +1,55 @@
+.button1 {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+}
+  
+.button1 svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}  
+.button1 span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  
+}
+  
+.button1:hover svg {
+    transform: translateX(5px) rotate(90deg);
+}
+  
+.button1:hover span {
+    transform: translateX(7px);
+}
+
+.container-2{
+    margin-top: 100px;
+    background-image: url(Images/background-shopping-image.jpg);
+    background-size: cover;
+
+}
+
+body{
+    background-color: azure;
+}
+
+.low-price{
+    color: red;
+}
+
+.free-shipping{
+    color: green;
+}
+
+.for-dot{
+    color: red
+}
