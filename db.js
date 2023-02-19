@@ -37,7 +37,7 @@ const Product = db.define('Products',{
 
 db.sync()//used for creating db (work as a promise)
     .then(()=> {
-        console.log("Database is been synced")
+        console.log("Database has been synced")
     })
     .catch(()=>{
         console.log("Error in creating database")
