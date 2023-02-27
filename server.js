@@ -5,12 +5,13 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.use('/CSS',express.static(__dirname+ '/public/CSS'))
+app.use('/JS',express.static(__dirname+'/public/JS'))
 app.use('/Images', express.static(__dirname + '/public/Images'))
 app.use('/', express.static(__dirname + '/public'))
 app.use('/api',require('./routes/api/index').route)
 
 app.get('/',(req,res)=>{
-    res.sendFile(__dirname + '/public/index.html')
+    res.sendFile(__dirname + '/public')
 })
 
 app.listen(2345,()=>{

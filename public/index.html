@@ -1,48 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="CSS/bootstrap.css">
-    <link rel="stylesheet" href="CSS/front-page.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script><!-- Always Use "Non-slim" version of Jquery CDN to get get/post functions -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
     <link rel="icon" href="Images/S_img.png"/>
+    <script src="shop.js"></script>
+    <script src="index.js"></script>
     <title>Shop</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
-                    <strong><a class="navbar-brand shadow-lg" href="#">Shopping<span class="for-dot">.</span>Point</a></strong>
-                     
-                    <button class="navbar-toggler" data-toggle="collapse" data-target="#mynavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="mynavbar">
-                        <ul class="navbar-nav mr-auto"></ul>
-                        <form class="form-inline mr-2" action="https://google.com/search" method="GET">
-                            <input type="search" class="form-control" name="q" placeholder="Search query" required>
-                            <button class="button1">
-                                <svg height="24" width="24" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path></svg>
-                                <span>Search</span>
-                            </button>
-                        </form>
-                    </div>
-                </nav>
+                <h2 class="text-center">Shop</h2>
             </div>
         </div>
-    </div>
-    <div class="container container-2 shadow-lg" style="background-image: url(Images/background-shopping-image.jpg);">
-        <div class="row">
-            <div class="col-md-12 text-center mt-5">
-                <h1 class="display-4"><strong>WELCOME TO</strong></h1>
-                <h1 class="display-4"><strong>SHOPPING<span class="for-dot">.</span>POINT</strong></h1>
-                <br>
-                <h2 class="display-5 text-primary">"Shop Smarter with Our <br> <span class="low-price">Low Prices</span> and <span class="free-shipping">Free Shipping!</span>"</h2>
-            </div>  
-        </div>    
+        <div class="row" id="product-list"></div>
+        <!-- JQuery(in shop_frontend.js) will get all the data from database, create the html with data and add all items in #product-list-->
     </div>
 </body>
 </html>
