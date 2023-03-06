@@ -14,6 +14,10 @@ app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/public')
 })
 
+app.get('/add_product',(req,res)=>{
+    res.sendFile(__dirname + '/public/add_products.html')
+})
+
 app.listen(2345,()=>{
     console.log("Server started on http://localhost:2345")
 })
