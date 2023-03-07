@@ -8,7 +8,7 @@ app.use('/CSS',express.static(__dirname+ '/public/CSS'))
 app.use('/JS',express.static(__dirname+'/public/JS'))
 app.use('/Images', express.static(__dirname + '/public/Images'))
 app.use('/', express.static(__dirname + '/public'))
-app.use('/api',require('./routes/api/index').route)
+app.use('/api',require('./routes/api/index').route)//sending request to api when request hits frontend
 
 app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/public')
