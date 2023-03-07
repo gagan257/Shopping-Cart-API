@@ -41,4 +41,4 @@
     ```
 3. **Go to http://localhost:2345** `List of products will be displayed that are present in Database via JQuery`
 
-4. **Add a product** `via` **http://localhost/add_product**
+4. **Add a product** `via` **http://localhost:2345/add_product**
